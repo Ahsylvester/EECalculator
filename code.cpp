@@ -111,72 +111,72 @@ void loop() {
   //sending 10s column output to 7 segment display
   outputTens = output / 10;
   if (outputTens%10 == 0) {
-	digitalWrite(16, HIGH);
-        digitalWrite(15, HIGH);
+	digitalWrite(A5, HIGH);
+        digitalWrite(13, HIGH);
         digitalWrite(3, HIGH);
         digitalWrite(2, HIGH);
         digitalWrite(1, HIGH);
-        digitalWrite(18, HIGH);
+        digitalWrite(A3, HIGH);
   }
   else if (outputTens%10 == 1){
-        digitalWrite(15, HIGH);
+        digitalWrite(13, HIGH);
         digitalWrite(3, HIGH);
   }
   else if (outputTens%10 == 2) {
-	digitalWrite(16, HIGH);
-        digitalWrite(15, HIGH);
+	digitalWrite(A5, HIGH);
+        digitalWrite(13, HIGH);
         digitalWrite(2, HIGH);
         digitalWrite(1, HIGH);
-        digitalWrite(17, HIGH);
+        digitalWrite(A4, HIGH);
   }
   else if (outputTens%10 == 3) {
-	digitalWrite(16, HIGH);
-        digitalWrite(15, HIGH);
+	digitalWrite(A5, HIGH);
+        digitalWrite(13, HIGH);
         digitalWrite(3, HIGH);
         digitalWrite(2, HIGH);
-        digitalWrite(17, HIGH);
+        digitalWrite(A4, HIGH);
   }
   else if (outputTens%10 == 4) {
-        digitalWrite(15, HIGH);
+        digitalWrite(13, HIGH);
         digitalWrite(3, HIGH);
-        digitalWrite(18, HIGH);
-        digitalWrite(17, HIGH); 
+        digitalWrite(A3, HIGH);
+        digitalWrite(A4, HIGH); 
   }
   else if (outputTens%10 == 5) {
-    	digitalWrite(16, HIGH);
+    	digitalWrite(A5, HIGH);
         digitalWrite(3, HIGH);
         digitalWrite(2, HIGH);
-        digitalWrite(18, HIGH);
-        digitalWrite(17, HIGH); 
+        digitalWrite(A3, HIGH);
+        digitalWrite(A4, HIGH); 
   }
   else if (outputTens%10 == 6) {
-    	digitalWrite(16, HIGH);
+    	digitalWrite(A5, HIGH);
         digitalWrite(3, HIGH);
         digitalWrite(2, HIGH);
         digitalWrite(1, HIGH);
-        digitalWrite(18, HIGH);
-        digitalWrite(17, HIGH); 
+        digitalWrite(A3, HIGH);
+        digitalWrite(A4, HIGH); 
   }
   else if (outputTens%10 == 7) {
-    	digitalWrite(16, HIGH);
-        digitalWrite(15, HIGH);
+    	digitalWrite(A5, HIGH);
+        digitalWrite(13, HIGH);
         digitalWrite(3, HIGH); 
   }
   else if (outputTens%10 == 8) {
-	digitalWrite(16, HIGH);
-        digitalWrite(15, HIGH);
+	digitalWrite(A5, HIGH);
+        digitalWrite(13, HIGH);
         digitalWrite(3, HIGH);
         digitalWrite(2, HIGH);
         digitalWrite(1, HIGH);
-        digitalWrite(18, HIGH);
-        digitalWrite(17, HIGH);
+        digitalWrite(A3, HIGH);
+        digitalWrite(A4, HIGH);
   }
   else if (outputTens%10 == 9) {
-	digitalWrite(16, HIGH);
-        digitalWrite(15, HIGH);
+	digitalWrite(A5, HIGH);
+        digitalWrite(13, HIGH);
         digitalWrite(3, HIGH);
-        digitalWrite(18, HIGH);
-        digitalWrite(17, HIGH);
+        digitalWrite(A3, HIGH);
+        digitalWrite(A4, HIGH);
   }
 
   delay(delayTime);
