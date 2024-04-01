@@ -24,17 +24,17 @@ void loop() {
 
   //converting input values
   num1 = map(num1, 0, 1023, 0, 10);
-  oper = map(oper, 0, 1023, 0, 4);
+  oper = map(oper, 0, 1023, 1, 4);
   num2 = map(num2, 0, 1023, 0, 10);
 
   //deciding which operator to use for output
-  if (oper < 1) {
+  if (oper == 1) {
   output = num1 + num2;
   }
-  else if (oper < 2) {
+  else if (oper == 2) {
   output = num1 - num2;
   }
-  else if (oper < 3) {
+  else if (oper == 3) {
   output = num1 * num2;
   }
   else {
