@@ -111,34 +111,72 @@ void loop() {
   //sending 10s column output to 7 segment display
   outputTens = output / 10;
   if (outputTens%10 == 0) {
-    //FIXME: OUTPUT 0 TO 10s column 
+	digitalWrite(16, HIGH);
+        digitalWrite(15, HIGH);
+        digitalWrite(3, HIGH);
+        digitalWrite(2, HIGH);
+        digitalWrite(1, HIGH);
+        digitalWrite(18, HIGH);
   }
-  else if (outputTens%10 == 1) {
-    //FIXME: OUTPUT 1 TO 10s column 
+  else if (outputTens%10 == 1){
+        digitalWrite(15, HIGH);
+        digitalWrite(3, HIGH);
   }
   else if (outputTens%10 == 2) {
-    //FIXME: OUTPUT 2 TO 10s column 
+	digitalWrite(16, HIGH);
+        digitalWrite(15, HIGH);
+        digitalWrite(2, HIGH);
+        digitalWrite(1, HIGH);
+        digitalWrite(17, HIGH);
   }
   else if (outputTens%10 == 3) {
-    //FIXME: OUTPUT 3 TO 10s column 
+	digitalWrite(16, HIGH);
+        digitalWrite(15, HIGH);
+        digitalWrite(3, HIGH);
+        digitalWrite(2, HIGH);
+        digitalWrite(17, HIGH);
   }
   else if (outputTens%10 == 4) {
-    //FIXME: OUTPUT 4 TO 10s column 
+        digitalWrite(15, HIGH);
+        digitalWrite(3, HIGH);
+        digitalWrite(18, HIGH);
+        digitalWrite(17, HIGH); 
   }
   else if (outputTens%10 == 5) {
-    //FIXME: OUTPUT 5 TO 10s column 
+    	digitalWrite(16, HIGH);
+        digitalWrite(3, HIGH);
+        digitalWrite(2, HIGH);
+        digitalWrite(18, HIGH);
+        digitalWrite(17, HIGH); 
   }
   else if (outputTens%10 == 6) {
-    //FIXME: OUTPUT 6 TO 10s column 
+    	digitalWrite(16, HIGH);
+        digitalWrite(3, HIGH);
+        digitalWrite(2, HIGH);
+        digitalWrite(1, HIGH);
+        digitalWrite(18, HIGH);
+        digitalWrite(17, HIGH); 
   }
   else if (outputTens%10 == 7) {
-    //FIXME: OUTPUT 7 TO 10s column 
+    	digitalWrite(16, HIGH);
+        digitalWrite(15, HIGH);
+        digitalWrite(3, HIGH); 
   }
   else if (outputTens%10 == 8) {
-    //FIXME: OUTPUT 8 TO 10s column 
+	digitalWrite(16, HIGH);
+        digitalWrite(15, HIGH);
+        digitalWrite(3, HIGH);
+        digitalWrite(2, HIGH);
+        digitalWrite(1, HIGH);
+        digitalWrite(18, HIGH);
+        digitalWrite(17, HIGH);
   }
   else if (outputTens%10 == 9) {
-    //FIXME: OUTPUT 9 TO 10s column 
+	digitalWrite(16, HIGH);
+        digitalWrite(15, HIGH);
+        digitalWrite(3, HIGH);
+        digitalWrite(18, HIGH);
+        digitalWrite(17, HIGH);
   }
 
   delay(delayTime);
