@@ -10,6 +10,9 @@ void setup() {
   for (int i=0; i<=13; i++) {
     pinMode(i, OUTPUT);
   }
+  pinMode(A3, OUTPUT);
+  pinMode(A4, OUTPUT);
+  pinMode(A5, OUTPUT);
 }
 
 void loop() {
