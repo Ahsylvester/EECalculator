@@ -7,6 +7,7 @@ int delayTime = 50; //milliseconds
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(9600);
   for (int i=0; i<=13; i++) {
     pinMode(i, OUTPUT);
   }
@@ -16,16 +17,15 @@ void setup() {
 }
 
 void loop() {
-
   //reading inputs from analog pins
   num1 = analogRead(num1Pin);
   oper = analogRead(operPin);
   num2 = analogRead(num2Pin);
 
   //converting input values
-  num1 = map(num1, 0, 1023, 0, 10);
+  num1 = map(num1, 0, 1023, 0, 9);
   oper = map(oper, 0, 1023, 1, 4);
-  num2 = map(num2, 0, 1023, 0, 10);
+  num2 = map(num2, 0, 1023, 0, 9);
 
   //deciding which operator to use for output
   if (oper == 1) {
@@ -52,7 +52,7 @@ void loop() {
   }
   else if (output%10 == 1) {
         digitalWrite(10, HIGH);
-        digitalWrite(8, HIGH); 
+        digitalWrite(8, HIGH);
   }
   else if (output%10 == 2) {
         digitalWrite(11, HIGH);
@@ -66,20 +66,20 @@ void loop() {
         digitalWrite(10, HIGH);
         digitalWrite(8, HIGH);
         digitalWrite(6, HIGH);
-        digitalWrite(7, HIGH); 
+        digitalWrite(7, HIGH);
   }
   else if (output%10 == 4) {
         digitalWrite(10, HIGH);
         digitalWrite(8, HIGH);
         digitalWrite(12, HIGH);
-        digitalWrite(7, HIGH); 
+        digitalWrite(7, HIGH);
   }
   else if (output%10 == 5) {
         digitalWrite(11, HIGH);
         digitalWrite(8, HIGH);
         digitalWrite(6, HIGH);
         digitalWrite(12, HIGH);
-        digitalWrite(7, HIGH); 
+        digitalWrite(7, HIGH);
   }
   else if (output%10 == 6) {
         digitalWrite(11, HIGH);
@@ -87,12 +87,12 @@ void loop() {
         digitalWrite(6, HIGH);
         digitalWrite(5, HIGH);
         digitalWrite(12, HIGH);
-        digitalWrite(7, HIGH); 
+        digitalWrite(7, HIGH);
   }
   else if (output%10 == 7) {
         digitalWrite(11, HIGH);
         digitalWrite(10, HIGH);
-        digitalWrite(8, HIGH); 
+        digitalWrite(8, HIGH);
   }
   else if (output%10 == 8) {
 	digitalWrite(11, HIGH);
@@ -143,14 +143,14 @@ void loop() {
         digitalWrite(13, HIGH);
         digitalWrite(3, HIGH);
         digitalWrite(A3, HIGH);
-        digitalWrite(A4, HIGH); 
+        digitalWrite(A4, HIGH);
   }
   else if (outputTens%10 == 5) {
     	digitalWrite(A5, HIGH);
         digitalWrite(3, HIGH);
         digitalWrite(2, HIGH);
         digitalWrite(A3, HIGH);
-        digitalWrite(A4, HIGH); 
+        digitalWrite(A4, HIGH);
   }
   else if (outputTens%10 == 6) {
     	digitalWrite(A5, HIGH);
@@ -158,12 +158,12 @@ void loop() {
         digitalWrite(2, HIGH);
         digitalWrite(1, HIGH);
         digitalWrite(A3, HIGH);
-        digitalWrite(A4, HIGH); 
+        digitalWrite(A4, HIGH);
   }
   else if (outputTens%10 == 7) {
     	digitalWrite(A5, HIGH);
         digitalWrite(13, HIGH);
-        digitalWrite(3, HIGH); 
+        digitalWrite(3, HIGH);
   }
   else if (outputTens%10 == 8) {
 	digitalWrite(A5, HIGH);
@@ -183,4 +183,16 @@ void loop() {
   }
 
   delay(delayTime);
+
+  for (int i=0;i<=13;i++) {
+    digitalWrite (i,LOW);
+  }
+   digitalWrite(A3, LOW);
+   digitalWrite(A4, LOW);
+   digitalWrite(A5, LOW);
+  Serial.print(num1);
+  Serial.print(oper);
+  Serial.println(num2);
+  Serial.println(output);
+
 }
